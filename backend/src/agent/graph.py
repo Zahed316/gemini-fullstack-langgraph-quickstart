@@ -1,5 +1,3 @@
-"""Graph definition for coordinating the multi-step research agent."""
-
 import os
 
 from dotenv import load_dotenv

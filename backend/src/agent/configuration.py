@@ -1,5 +1,3 @@
-"""Pydantic model defining the configuration for the agent graph."""
-
 import os
 from typing import Any, Optional
 

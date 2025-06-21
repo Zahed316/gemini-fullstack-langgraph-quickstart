@@ -1,5 +1,3 @@
-"""Utility functions for processing messages and managing citations."""
-
 from typing import Any, Dict, List
 
 from langchain_core.messages import AIMessage, AnyMessage, HumanMessage

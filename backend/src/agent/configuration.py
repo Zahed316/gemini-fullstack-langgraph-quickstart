@@ -1,3 +1,5 @@
+"""Configuration utilities for controlling the agent behaviour."""
+
 import os
 from pydantic import BaseModel, Field
 from typing import Any, Optional

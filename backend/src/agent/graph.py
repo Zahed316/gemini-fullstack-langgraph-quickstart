@@ -1,3 +1,5 @@
+"""Define the LangGraph workflow and its individual nodes."""
+
 import os
 
 from agent.tools_and_schemas import SearchQueryList, Reflection

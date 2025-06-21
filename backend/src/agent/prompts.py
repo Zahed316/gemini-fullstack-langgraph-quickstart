@@ -1,8 +1,12 @@
+"""Prompt templates and helper functions for the research agent."""
+
 from datetime import datetime
 
 
 # Get current date in a readable format
-def get_current_date():
+def get_current_date() -> str:
+    """Return the current date formatted for inclusion in prompts."""
+
     return datetime.now().strftime("%B %d, %Y")
 
 

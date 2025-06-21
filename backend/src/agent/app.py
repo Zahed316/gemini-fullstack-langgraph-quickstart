@@ -1,5 +1,4 @@
 # mypy: disable - error - code = "no-untyped-def,misc"
-import logging
 import pathlib
 
 from fastapi import FastAPI, Response
@@ -13,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 def create_frontend_router(build_dir="../frontend/dist"):
-    """Creates a router to serve the React frontend.
+    """Create a router to serve the React frontend.
 
     Args:
         build_dir: Path to the React build directory relative to this file.
@@ -31,6 +30,7 @@ def create_frontend_router(build_dir="../frontend/dist"):
         from starlette.routing import Route
 
         async def dummy_frontend(request):
+            """Return a 503 response when the frontend build is missing."""
             return Response(
                 "Frontend not built. Run 'npm run build' in the frontend directory.",
                 media_type="text/plain",

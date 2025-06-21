@@ -1,6 +1,11 @@
 import argparse
+import logging
+
 from langchain_core.messages import HumanMessage
+
 from agent.graph import graph
+
+logger = logging.getLogger(__name__)
 
 
 def main() -> None:
@@ -36,7 +41,7 @@ def main() -> None:
     result = graph.invoke(state)
     messages = result.get("messages", [])
     if messages:
-        print(messages[-1].content)
+        logger.info(messages[-1].content)
 
 
 if __name__ == "__main__":

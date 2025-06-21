@@ -1,4 +1,7 @@
+"""Pydantic models used for structured output from the language model."""
+
 from typing import List
+
 from pydantic import BaseModel, Field
 
 

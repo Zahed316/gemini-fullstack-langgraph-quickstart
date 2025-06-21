@@ -1,5 +1,9 @@
+"""Command line interface for running the research agent."""
+
 import argparse
+
 from langchain_core.messages import HumanMessage
+
 from agent.graph import graph
 
 

@@ -1,8 +1,10 @@
+"""Prompt templates and helper utilities used by the agent graph."""
+
 from datetime import datetime
 
 
-# Get current date in a readable format
-def get_current_date():
+def get_current_date() -> str:
+    """Return the current date in a human readable format."""
     return datetime.now().strftime("%B %d, %Y")
 
 

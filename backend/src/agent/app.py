@@ -1,6 +1,7 @@
 # mypy: disable - error - code = "no-untyped-def,misc"
-import pathlib
 import logging
+import pathlib
+
 from fastapi import FastAPI, Response
 from fastapi.staticfiles import StaticFiles
 

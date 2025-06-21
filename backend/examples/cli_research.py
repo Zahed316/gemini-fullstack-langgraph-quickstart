@@ -1,6 +1,8 @@
 import argparse
 import logging
+
 from langchain_core.messages import HumanMessage
+
 from agent.graph import graph
 
 logger = logging.getLogger(__name__)

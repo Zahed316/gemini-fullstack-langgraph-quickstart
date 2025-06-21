@@ -5,6 +5,8 @@ import pathlib
 from fastapi import FastAPI, Response
 from fastapi.staticfiles import StaticFiles
 
+logger = logging.getLogger(__name__)
+
 # Define the FastAPI app
 app = FastAPI()
 logger = logging.getLogger(__name__)
@@ -23,8 +25,6 @@ def create_frontend_router(build_dir="../frontend/dist"):
 
     if not build_path.is_dir() or not (build_path / "index.html").is_file():
         logger.warning(
-            "WARN: Frontend build directory not found or incomplete at %s. "
-            "Serving frontend will likely fail.",
             build_path,
         )
         # Return a dummy router if build isn't ready

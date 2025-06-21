@@ -1,5 +1,3 @@
-"""Configuration utilities for controlling the agent behaviour."""
-
 import os
 from typing import Any, Optional
 

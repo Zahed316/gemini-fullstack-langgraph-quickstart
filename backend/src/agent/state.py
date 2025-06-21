@@ -1,5 +1,3 @@
-"""Shared state and typed dictionary definitions for the agent workflow."""
-
 from __future__ import annotations
 
 import operator

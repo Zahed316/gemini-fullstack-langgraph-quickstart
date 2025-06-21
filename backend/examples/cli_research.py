@@ -1,5 +1,3 @@
-"""Command line entrypoint for running the research agent."""
-
 import argparse
 
 from langchain_core.messages import HumanMessage

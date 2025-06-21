@@ -1,5 +1,3 @@
-"""Define the LangGraph workflow and its individual nodes."""
-
 import os
 
 from dotenv import load_dotenv

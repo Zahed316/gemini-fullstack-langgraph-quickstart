@@ -1,4 +1,8 @@
 from datetime import datetime
+
+
+def get_current_date() -> str:
+    """Return the current date formatted for prompts."""
     return datetime.now().strftime("%B %d, %Y")
 
 

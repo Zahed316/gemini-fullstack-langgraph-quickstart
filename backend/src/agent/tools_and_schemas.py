@@ -1,3 +1,5 @@
+"""Pydantic models used in the agent workflow."""
+
 from typing import List
 
 from pydantic import BaseModel, Field
@@ -5,6 +7,7 @@ from pydantic import BaseModel, Field
 
 class SearchQueryList(BaseModel):
     """List of search queries with a short rationale."""
+
     query: List[str] = Field(
         description="A list of search queries to be used for web research."
     )
@@ -15,6 +18,7 @@ class SearchQueryList(BaseModel):
 
 class Reflection(BaseModel):
     """Structured result from the reflection step."""
+
     is_sufficient: bool = Field(
         description="Whether the provided summaries are sufficient to answer the user's question."
     )

@@ -1,3 +1,5 @@
+"""Typed state definitions for the research agent."""
+
 from __future__ import annotations
 
 import operator
@@ -23,6 +25,7 @@ class OverallState(TypedDict):
 
 class ReflectionState(TypedDict):
     """State returned from the reflection step."""
+
     is_sufficient: bool
     knowledge_gap: str
     follow_up_queries: Annotated[list, operator.add]
@@ -32,17 +35,20 @@ class ReflectionState(TypedDict):
 
 class Query(TypedDict):
     """Structure representing a single search query."""
+
     query: str
     rationale: str
 
 
 class QueryGenerationState(TypedDict):
     """State produced when generating search queries."""
+
     search_query: list[Query]
 
 
 class WebSearchState(TypedDict):
     """State for a single web search invocation."""
+
     search_query: str
     id: str
 

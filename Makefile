@@ -12,7 +12,7 @@ dev-frontend:
 
 dev-backend:
 	@echo "Starting backend development server..."
-	@cd backend && langgraph dev
+	@cd backend && python -m langgraph_cli dev
 
 # Run frontend and backend concurrently
 dev:

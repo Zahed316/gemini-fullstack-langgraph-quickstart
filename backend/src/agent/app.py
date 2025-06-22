@@ -1,12 +1,11 @@
 """FastAPI application exposing the LangGraph agent and frontend assets."""
 
 # mypy: disable - error - code = "no-untyped-def,misc"
+import logging
 import pathlib
 
 from fastapi import FastAPI, Response
 from fastapi.staticfiles import StaticFiles
-
-logger = logging.getLogger(__name__)
 
 # Define the FastAPI app
 app = FastAPI()

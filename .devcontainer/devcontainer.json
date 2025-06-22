@@ -1,0 +1,6 @@
+{
+  "name": "Gemini Fullstack",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "./setup.sh",
+  "workspaceFolder": "/workspace"
+}

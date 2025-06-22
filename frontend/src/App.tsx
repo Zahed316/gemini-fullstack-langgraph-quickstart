@@ -27,7 +27,7 @@ export default function App() {
       : "http://localhost:8123",
     assistantId: "agent",
     messagesKey: "messages",
-    onUpdateEvent: (event: any) => {
+    onUpdateEvent: (event: Record<string, unknown>) => {
       let processedEvent: ProcessedEvent | null = null;
       if (event.generate_query) {
         processedEvent = {
@@ -35,10 +35,12 @@ export default function App() {
           data: event.generate_query?.search_query?.join(", ") || "",
         };
       } else if (event.web_research) {
-        const sources = event.web_research.sources_gathered || [];
+        const sources =
+          (event.web_research as { sources_gathered?: { label?: string }[] })
+            .sources_gathered || [];
         const numSources = sources.length;
         const uniqueLabels = [
-          ...new Set(sources.map((s: any) => s.label).filter(Boolean)),
+          ...new Set(sources.map((s) => s.label).filter(Boolean)),
         ];
         const exampleLabels = uniqueLabels.slice(0, 3).join(", ");
         processedEvent = {
@@ -66,7 +68,7 @@ export default function App() {
         ]);
       }
     },
-    onError: (error: any) => {
+    onError: (error: Error) => {
       setError(error.message);
     },
   });

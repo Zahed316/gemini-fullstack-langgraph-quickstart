@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 
 export interface ProcessedEvent {
   title: string;
-  data: any;
+  data: unknown;
 }
 
 interface ActivityTimelineProps {

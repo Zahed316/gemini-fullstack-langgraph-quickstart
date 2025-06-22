@@ -1,4 +1,7 @@
+"""CLI helper for invoking the research agent."""
+
 import argparse
+import logging
 
 from langchain_core.messages import HumanMessage
 

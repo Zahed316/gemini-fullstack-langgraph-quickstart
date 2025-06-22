@@ -1,3 +1,5 @@
+"""Configuration helpers for the agent."""
+
 import os
 from typing import Any, Optional
 

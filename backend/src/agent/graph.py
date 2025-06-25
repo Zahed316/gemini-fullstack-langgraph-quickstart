@@ -1,3 +1,5 @@
+"""LangGraph definition for the web research agent."""
+
 import os
 
 from dotenv import load_dotenv

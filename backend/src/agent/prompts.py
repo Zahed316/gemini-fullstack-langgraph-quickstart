@@ -1,3 +1,5 @@
+"""Prompt templates and helpers for the agent."""
+
 from datetime import datetime
 
 
